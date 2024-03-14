@@ -1,7 +1,11 @@
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Script executed successfully!
-    </h1>
-  )
+    <div>
+      <Navbar />
+      <div></div>
+    </div>
+  );
 }
