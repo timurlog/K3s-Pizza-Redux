@@ -49,9 +49,9 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="nav-user">
+        <Link to={""} className="nav-user">
           <i className="fa-solid fa-cart-shopping"></i>
-        </div>
+        </Link>
       </nav>
     </header>
   );
