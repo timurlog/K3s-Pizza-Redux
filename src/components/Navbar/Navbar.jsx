@@ -37,19 +37,22 @@ export default function Navbar() {
         <div className={`nav-menu ${showMenu ? "show-menu" : ""}`} id="navMenu">
           <ul className="nav-list">
             <li>
-              <NavLink className="nav-list-link" to={""}>
+              <NavLink className="nav-list-link" to={"/K3s-Pizza-Redux/pizza"}>
                 PIZZA
               </NavLink>
             </li>
 
             <li>
-              <NavLink className="nav-list-link" to={""}>
+              <NavLink
+                className="nav-list-link"
+                to={"/K3s-Pizza-Redux/pizza-maker"}
+              >
                 PIZZA MAKER
               </NavLink>
             </li>
           </ul>
         </div>
-        <Link to={""} className="nav-user">
+        <Link to={"/K3s-Pizza-Redux/basket"} className="nav-user">
           <i className="fa-solid fa-cart-shopping"></i>
         </Link>
       </nav>
