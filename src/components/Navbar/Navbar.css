@@ -59,7 +59,6 @@
   font-size: 1.5rem;
   line-height: 2rem;
   letter-spacing: 3px;
-  position: relative;
   transition: color 0.2s;
 }
 .header .header-nav .nav-menu .nav-list .nav-list-link:hover {
@@ -113,7 +112,7 @@
     padding-top: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   .header .header-nav .nav-user {
@@ -141,29 +140,8 @@
     padding-top: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
-  }
-  .header .header-nav .nav-user {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header .header-nav .nav-user i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #1e1e1e;
-    transition: background 0.3s;
-  }
-  .header .header-nav .nav-user i:hover {
-    background: #c4e1d5;
   }
 }
 .show-menu {

@@ -21,7 +21,7 @@ export default function Main() {
       ),
     },
     {
-      path: "/K3s-Pizza-Redux/pizza",
+      path: "/K3s-Pizza-Redux/pizza/",
       element: (
         <Provider store={store}>
           <PizzaBuy />
@@ -29,7 +29,7 @@ export default function Main() {
       ),
     },
     {
-      path: "/K3s-Pizza-Redux/pizza/:pizzaId",
+      path: "/K3s-Pizza-Redux/pizza/:pizzaId/",
       element: (
         <Provider store={store}>
           <PizzaInfo />
@@ -37,7 +37,7 @@ export default function Main() {
       ),
     },
     {
-      path: "/K3s-Pizza-Redux/pizza-maker",
+      path: "/K3s-Pizza-Redux/pizza-maker/",
       element: (
         <Provider store={store}>
           <PizzaMaker />
@@ -45,7 +45,7 @@ export default function Main() {
       ),
     },
     {
-      path: "/K3s-Pizza-Redux/basket",
+      path: "/K3s-Pizza-Redux/basket/",
       element: (
         <Provider store={store}>
           <Basket />
