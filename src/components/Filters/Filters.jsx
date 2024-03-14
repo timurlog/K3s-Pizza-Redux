@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Filters() {
   return (
-    <div className="px-5 md:px-10">
+    <div>
       <div className="dropdown">
         <div
           tabIndex={0}
@@ -17,13 +17,13 @@ export default function Filters() {
         >
           <li>
             <div>
-              <i class="fa-solid fa-arrow-down-short-wide"></i>
+              <i className="fa-solid fa-arrow-down-short-wide"></i>
               Ascending price
             </div>
           </li>
           <li>
             <div>
-              <i class="fa-solid fa-arrow-down-wide-short"></i>
+              <i className="fa-solid fa-arrow-down-wide-short"></i>
               Decreasing price
             </div>
           </li>
