@@ -48,6 +48,7 @@ export default function PizzaBuy() {
         {newData.map((item, index) => (
           <PizzaCard
             key={index}
+            id={item.id}
             name={item.name}
             ingredient={item.ingredient}
             priceString={item.priceString}

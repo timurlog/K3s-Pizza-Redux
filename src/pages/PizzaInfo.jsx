@@ -1,26 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { dataContext } from "../main";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addPizza } from "../features/basket/basketSlice";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 export default function PizzaInfo() {
+  const basketArray = useSelector((state) => state.basket.value);
+
+  const dispatch = useDispatch();
+
   const { data } = useContext(dataContext);
 
   const { pizzaId } = useParams();
-  const [pizza, setPizza] = useState([]);
-
-  useEffect(() => {
-    setPizza(
-      data.filter((item) =>
-        item.name.toLowerCase().includes(pizzaId.toLowerCase())
-      )
-    );
-  }, [pizzaId, data]);
+  const [pizza, setPizza] = useState([data[pizzaId]]);
 
   return (
     <div className="bg-white h-screen flex flex-col justify-between">
@@ -78,7 +75,12 @@ export default function PizzaInfo() {
           </div>
         </div>
         <div className="pt-5">
-          <button className="btn bg-[#7BB541] hover:bg-[#CEE3B8] text-[#1E1E1E] font-[mont-heavy] border-none text-xl">
+          <button
+            onClick={() => {
+              dispatch(addPizza(pizzaId));
+            }}
+            className="btn bg-[#7BB541] hover:bg-[#CEE3B8] text-[#1E1E1E] font-[mont-heavy] border-none text-xl"
+          >
             <i className="fa-solid fa-cart-plus"></i>
             Add to basket
           </button>
