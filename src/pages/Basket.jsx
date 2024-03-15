@@ -26,7 +26,9 @@ export default function Basket() {
             <div className="h-full w-full flex justify-between">
               <div className="flex flex-col justify-between">
                 <div className="font-[mont-heavy] text-xl">{item.name}</div>
-                <div className="font-[mont-extralight] text-lg">x{item.quantity}</div>
+                <div className="font-[mont-extralight] text-lg">
+                  x{item.quantity}
+                </div>
               </div>
               <div className="flex flex-col justify-between items-end">
                 <button
@@ -37,7 +39,9 @@ export default function Basket() {
                 >
                   <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div className="font-[mont-extralight] text-lg">{item.priceString}</div>
+                <div className="font-[mont-extralight] text-lg">
+                  {item.priceString}
+                </div>
               </div>
             </div>
           </div>

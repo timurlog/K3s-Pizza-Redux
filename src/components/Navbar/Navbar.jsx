@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+  const basketArray = useSelector((state) => state.basket.value);
+
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
@@ -61,11 +64,19 @@ export default function Navbar() {
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52"
             >
+              {basketArray
+                .filter((item) => item.quantity >= 1)
+                .slice(0, 2)
+                .map((item, index) => (
+                  <li key={index}>
+                    <div className="flex justify-between">
+                      <div>{item.name}</div>
+                      <div>x{item.quantity}</div>
+                    </div>
+                  </li>
+                ))}
               <li>
-                <div>pizza 1</div>
-              </li>
-              <li>
-                <div>pizza 2</div>
+                <div>...</div>
               </li>
             </ul>
           </div>
