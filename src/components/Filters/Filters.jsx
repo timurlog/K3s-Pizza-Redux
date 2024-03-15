@@ -9,6 +9,7 @@ export default function Filters(props) {
           role="button"
           className="btn mb-1 bg-[#B54141] hover:bg-[#E2A8A8] text-[#1E1E1E] font-[mont-heavy] border-none text-xl"
         >
+          <i className="fa-solid fa-filter"></i>
           Filters
         </div>
         <ul

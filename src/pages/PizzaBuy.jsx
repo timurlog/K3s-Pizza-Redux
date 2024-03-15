@@ -36,7 +36,7 @@ export default function PizzaBuy() {
   }, [filterVal, data]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       <Navbar />
       <div className="px-5 md:px-10 gap-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-12">
         <Filters setFilterVal={setFilterVal} />
