@@ -52,8 +52,23 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to={"/K3s-Pizza-Redux/basket/"} className="nav-user">
-          <i className="fa-solid fa-cart-shopping"></i>
+        <Link to={"/K3s-Pizza-Redux/basket/"}>
+          <div className="dropdown dropdown-hover dropdown-end">
+            <div tabIndex={0} role="button" className="m-1 nav-user">
+              <i className="fa-solid fa-cart-shopping"></i>
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
         </Link>
       </nav>
     </header>
