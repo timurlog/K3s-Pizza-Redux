@@ -43,7 +43,7 @@ export default function PizzaBuy() {
         <div className="hidden xl:block"></div>
         <div className="hidden lg:block"></div>
         <div className="font-[mont-heavy] sm:text-right text-6xl text-[#1E1E1E]">
-          MENU
+          Menu
         </div>
         {newData.map((item, index) => (
           <PizzaCard

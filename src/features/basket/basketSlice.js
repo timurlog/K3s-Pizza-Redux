@@ -96,9 +96,13 @@ export const basketSlice = createSlice({
       const i = action.payload;
       state.value[i].quantity += 1;
     },
+    rmPizza: (state, action) => {
+      const i = action.payload;
+      state.value[i].quantity -= 1;
+    },
   },
 });
 
-export const { addPizza } = basketSlice.actions;
+export const { addPizza, rmPizza } = basketSlice.actions;
 
 export default basketSlice.reducer;

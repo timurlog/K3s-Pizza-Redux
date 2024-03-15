@@ -62,10 +62,10 @@ export default function Navbar() {
               className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+                <div>pizza 1</div>
               </li>
               <li>
-                <a>Item 2</a>
+                <div>pizza 2</div>
               </li>
             </ul>
           </div>
